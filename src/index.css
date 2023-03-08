@@ -1,0 +1,288 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+
+
+
+}
+
+
+:root.dark-mode {
+  --white: #000000;
+  --black: #ffffff;
+
+
+}
+
+
+
+
+body,
+.App {
+  font-family:Ubuntu, Cantarell,  "Segoe UI","Open Sans", "Helvetica Neue",Oxygen, Roboto, sans-serif;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: #eb6767;
+ 
+}
+
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: rgb(204, 0, 0);
+  transition: background-color 0.3s ease-in-out;
+}
+button:hover {
+  color: rgb(205, 15, 15);
+  background-color: #020617;
+  border-radius: 10px;
+}
+
+
+
+
+#title_bar {
+  display: flex;
+  background-color: var(--white);
+  color: var(--black);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  border-bottom: 3px solid #0a0909;
+}
+
+
+#center_text {
+  text-align: center;
+}
+#subheading {
+  color: #070000;
+}
+#hide_sidebar,
+#dark_mode {
+  font-size: 50px;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+
+#hide_sidebar:hover,
+#container {
+  display: flex;
+  height: 100vh;
+}
+#dark_mode:hover {
+  background-color: #000010;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+
+#sidebar {
+  display: flex;
+  background-color: var(--white);
+  color: var(--black);
+  flex-direction: column;
+  flex: 1;
+  border-right: 2px solid #0d0000;
+}
+#sidebar.hide {
+  display: none;
+}
+
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0c0000;
+}
+.app-sidebar-header button {
+  font-size: 50px;
+  color: rgb(204, 0, 0);
+  padding: 20px;
+  height: 100%;
+}
+
+
+.app-sidebar-notes {
+  border-right: 2px solid #0c0000;
+  overflow-y: scroll;
+}
+.app-sidebar-header h1 {
+  margin: 0;
+  padding: 20px;
+}
+
+
+.app-sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+}
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+}
+.app-sidebar-note button {
+  color: crimson;
+}
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+.app-sidebar-note small {
+  display: block;
+  color: #0c0000;
+}
+
+
+.app-sidebar-note:hover {
+  background: #ddd;
+}
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: rgb(204, 0, 0);
+  color: white;
+}
+
+
+
+
+.app-main {
+  display: flex;
+  background-color: var(--white);
+  color: var(--black);
+  flex-direction: column;
+  flex: 3;
+}
+
+
+.app-main-note-edit {
+  flex: 3;
+}
+
+
+.no-active-note {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  color: #0a0000;
+  background-color: var(--white);
+}
+
+
+
+
+.app-main-note-edit input {
+  display: block;
+  border: none;
+  margin-bottom: 20px;
+  height: 100%;
+  resize: none;
+
+
+}
+#mainbar-header {
+  display: flex;
+  justify-content: space-between;
+}
+#mainbar-title {
+  display: inline-block;
+  margin: 0;
+  height: 100%;
+}
+#mainbar-title-input {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 10px;
+  margin: auto;
+}
+#mainbar-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+#mainbar-buttons button {
+  font-size: 25px;
+  margin-left: 10px;
+}
+#save_button {
+  color: var(--black);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#save_button:hover {
+  background-color: rgb(70, 204, 146);
+  border-radius: 10px;
+}
+
+
+#delete_button {
+  color: var(--black);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#delete_button:hover {
+  background-color: #eb6767;
+  border-radius: 10px;
+}
+
+
+
+
+#mainbar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.ql-toolbar.ql-snow .ql-picker-label {
+  color: var(--black);
+}
+
+
+.ql-toolbar {
+  border: none !important;
+  border-bottom: 1px solid #070707 !important;
+}
+.ql-fill {
+  fill: var(--black) !important;
+}
+.ql-stroke {
+  stroke: var(--black) !important;
+}
+.quill-container {
+  border: none !important;
+}
+
+
+#date {
+  margin: 0;
+  padding: 0px;
+  font-size: 20px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+
